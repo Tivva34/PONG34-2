@@ -29,10 +29,11 @@ public class Ball : MonoBehaviour
     {
 
 
-        float x = Random.Range(0, 2) == 0 ? -1 : 1;
-        float y = Random.Range(0, 2) == 0 ? -1 : 1;
+        float x = Random.Range(0, 3) == 0 ? -1 : 1;
+        float y = Random.Range(0, 3) == 0 ? -1 : 1;
         rb.velocity = new Vector2(speed * x, speed * y);
         
+       
         
         
     }
@@ -40,8 +41,8 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        int x = 6;
-        int y = 3;
+        float x = 6;
+        float y = 3;
 
         if (Random.Range(-1, 1) < 0)
         {
@@ -52,6 +53,11 @@ public class Ball : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         transform.position = OrignalPosition;
         rb.velocity = new Vector2(x, y);
+
+         x = Random.Range(0, 2) == 0 ? -1 : 1;
+         y = Random.Range(0, 2) == 0 ? -1 : 1;
+        rb.velocity = new Vector2(speed * x, speed * y);
+
     }
 
 

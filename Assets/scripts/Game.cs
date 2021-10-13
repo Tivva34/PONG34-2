@@ -16,7 +16,7 @@ public class Game : MonoBehaviour
     private void Start(int Player1Score, int Player2Score)
     {
        Player1ScoreUI.text = Player1Score.ToString();
-        Player2ScoreUI.text = Player2Score.ToString();
+       Player2ScoreUI.text = Player2Score.ToString();
     }
     public void Player1Scored()
     {
